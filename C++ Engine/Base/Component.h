@@ -34,7 +34,6 @@ public:
 
 #pragma region Utility
 	bool IsEnabledGlobal() override;
-	//void SetSelfPointer(std::weak_ptr<Object> pSelfPointer);
 #pragma endregion
 
 };

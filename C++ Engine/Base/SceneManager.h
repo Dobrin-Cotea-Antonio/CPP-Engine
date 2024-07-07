@@ -2,16 +2,13 @@
 #include <string>
 #include <map>
 #include <memory>
-
 #include "Scene.h"
 
 class SceneManager {
 	friend class Game;
-
 private:
 	std::map<std::string, std::shared_ptr<Scene>> scenes;
 	std::string activeScene;
-
 public:
 	static SceneManager* instance;
 public:
@@ -25,7 +22,7 @@ public:
 	SceneManager(SceneManager& pOther) = delete;
 	void operator=(const SceneManager&) = delete;
 #pragma endregion
-	//make static
+
 #pragma region Add Scene Template
 	template<typename T, typename = std::enable_if_t<std::is_base_of<Scene, T>::value>>
 	std::weak_ptr<T> AddScene(std::string pID) {
@@ -58,5 +55,4 @@ public:
 	static SceneManager* GetInstance();
 	static std::weak_ptr<Scene> ReturnActiveScene();
 #pragma endregion
-
 };

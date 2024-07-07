@@ -50,7 +50,6 @@ public:
 	virtual void CreateLevel();
 	void DestroyScene();
 	void SetLoadScene(std::function<void(std::string pScene)> pLoadScene);
-
 private:
 	void LoadScene(const std::string pScene);
 #pragma endregion
@@ -59,6 +58,4 @@ private:
 public:
 	const std::string GetID()const;
 #pragma endregion
-
-
 };

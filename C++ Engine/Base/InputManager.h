@@ -171,5 +171,4 @@ public:
 	static InputManager* GetInstance();
 	void StartUpdate();
 #pragma endregion
-
 };

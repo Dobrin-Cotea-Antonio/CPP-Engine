@@ -23,5 +23,4 @@ public:
 	void SetPosition(const Vec2 pPos);
 	void SetPosition(const float pX, const float pY);
 #pragma endregion
-
 };

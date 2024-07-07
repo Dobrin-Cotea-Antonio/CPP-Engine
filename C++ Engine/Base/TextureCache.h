@@ -6,7 +6,6 @@
 #include "SFML/Graphics/Texture.hpp"
 
 class TextureCache {
-
 private:
 	static TextureCache* instance;
 
@@ -34,5 +33,4 @@ public:
 	sf::Texture& GetTexture(const std::string& pTextureAdress);
 	void DecreaseTextureCount(const std::string& pTextureAdress);
 #pragma endregion
-
 };

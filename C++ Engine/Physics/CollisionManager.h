@@ -18,7 +18,6 @@ private:
 	int partitionCols;
 	Vec2 partitionCellSize;
 	Cell* cellsMatrix[10][10];
-	
 
 #pragma region Constructor/Destructor
 protected:

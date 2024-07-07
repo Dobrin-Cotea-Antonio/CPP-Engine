@@ -4,7 +4,6 @@
 #include "AnimationData.h";
 
 class AnimatedSpriteRenderer :public SpriteRenderer {
-
 protected:
 	bool animate = true;
 	bool animationIsInReverse = false;
@@ -16,7 +15,6 @@ protected:
 
 	Vec2 frameSize = Vec2(32, 32);
 	float elapsedTime = 0;
-
 
 #pragma region Constructor/Destructor
 public:
@@ -42,5 +40,4 @@ public:
 	void SetAnimationData(const AnimationData& pAnimationData);
 	void ChangeAnimationState(const bool pState);
 #pragma endregion
-
 };

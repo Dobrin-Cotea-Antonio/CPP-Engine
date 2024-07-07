@@ -22,5 +22,4 @@ public:
 	virtual void LoadSprite(const std::string& pTextureAdress);
 	virtual void Draw();
 #pragma endregion
-
 };

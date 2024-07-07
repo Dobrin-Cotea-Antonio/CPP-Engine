@@ -145,6 +145,7 @@
     <ClCompile Include="Base\Transform.cpp" />
     <ClCompile Include="Base\Vec2.cpp" />
     <ClCompile Include="Game\CollisionTest.cpp" />
+    <ClCompile Include="Game\EventTest.cpp" />
     <ClCompile Include="Game\MyGame.cpp" />
     <ClCompile Include="Game\TestScene.cpp" />
     <ClCompile Include="main.cpp" />
@@ -152,11 +153,13 @@
     <ClCompile Include="Physics\Collider.cpp" />
     <ClCompile Include="Physics\CollisionInfo.cpp" />
     <ClCompile Include="Physics\CollisionManager.cpp" />
+    <ClCompile Include="Physics\RectangleCollider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\AnimatedSpriteRenderer.h" />
     <ClInclude Include="Base\AnimationData.h" />
     <ClInclude Include="Base\Component.h" />
+    <ClInclude Include="Base\Event.h" />
     <ClInclude Include="Base\GameObject.h" />
     <ClInclude Include="Base\Game.h" />
     <ClInclude Include="Base\InputManager.h" />
@@ -169,6 +172,7 @@
     <ClInclude Include="Base\Transform.h" />
     <ClInclude Include="Base\Vec2.h" />
     <ClInclude Include="Game\CollisionTest.h" />
+    <ClInclude Include="Game\EventTest.h" />
     <ClInclude Include="Game\MyGame.h" />
     <ClInclude Include="Game\TestScene.h" />
     <ClInclude Include="Physics\Cell.h" />
@@ -176,6 +180,7 @@
     <ClInclude Include="Physics\Collider.h" />
     <ClInclude Include="Physics\CollisionInfo.h" />
     <ClInclude Include="Physics\CollisionManager.h" />
+    <ClInclude Include="Physics\RectangleCollider.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

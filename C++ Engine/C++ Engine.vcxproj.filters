@@ -16,47 +16,8 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{0a6847f0-f12e-4e58-a108-77884544aba5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\GameObject">
-      <UniqueIdentifier>{929fe83f-7cc5-4967-9d61-3a42c45fcd43}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Object">
-      <UniqueIdentifier>{35c56d62-ebfb-454c-9b35-5dbaededeb60}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Component">
-      <UniqueIdentifier>{e880023c-daa4-4203-ae6c-cef527895b58}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Transform">
-      <UniqueIdentifier>{b4d9eed7-9696-46e9-8704-34cd3f738f5b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Vec2">
-      <UniqueIdentifier>{4aec14da-7dab-41ef-b332-aa951842a7ee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\SpriteRenderer">
-      <UniqueIdentifier>{9044f9d3-e409-401d-a17f-e5d5f73e11a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\TimeClass">
-      <UniqueIdentifier>{c0efa380-cc2c-417f-ad0e-ffb514dee837}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\AnimatedSpriteRenderer">
-      <UniqueIdentifier>{0379d811-5a5d-4684-b2a8-19d89042c6b1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\TextureCache">
-      <UniqueIdentifier>{3eeef1a9-f1b5-4c85-9e08-c2df6737aa0b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Scene">
-      <UniqueIdentifier>{c84ce0b1-023d-4deb-8b38-ecce1c26af9c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\SceneManager">
-      <UniqueIdentifier>{c2cefa6c-cad1-4c4e-9f6e-ca1ec37a7116}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Game">
-      <UniqueIdentifier>{812da712-7370-416a-bc2f-279e5ceb5b83}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{52057cdb-67f9-4c7e-9b02-86a36f1f34cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\InputManager">
-      <UniqueIdentifier>{8bfeea89-f4f8-4bae-9548-e378443badc4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Physics">
       <UniqueIdentifier>{abf05ab0-e0bb-48b6-a49e-55f55a6d95d9}</UniqueIdentifier>
@@ -82,52 +43,103 @@
     <Filter Include="Engine\Physics\Cell">
       <UniqueIdentifier>{c2bb05a0-498e-4bbb-8e55-936ea98718ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Physics\RectangleCollider">
+      <UniqueIdentifier>{15fc10ae-36e1-4b75-9e25-7a468db0cb3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base">
+      <UniqueIdentifier>{15bad87e-1afd-4d66-9b6f-cbfae026bb23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Object">
+      <UniqueIdentifier>{35c56d62-ebfb-454c-9b35-5dbaededeb60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\InputManager">
+      <UniqueIdentifier>{8bfeea89-f4f8-4bae-9548-e378443badc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\GameObject">
+      <UniqueIdentifier>{929fe83f-7cc5-4967-9d61-3a42c45fcd43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Game">
+      <UniqueIdentifier>{812da712-7370-416a-bc2f-279e5ceb5b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Component">
+      <UniqueIdentifier>{e880023c-daa4-4203-ae6c-cef527895b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\AnimatedSpriteRenderer">
+      <UniqueIdentifier>{0379d811-5a5d-4684-b2a8-19d89042c6b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Scene">
+      <UniqueIdentifier>{c84ce0b1-023d-4deb-8b38-ecce1c26af9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\SceneManager">
+      <UniqueIdentifier>{c2cefa6c-cad1-4c4e-9f6e-ca1ec37a7116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\SpriteRenderer">
+      <UniqueIdentifier>{9044f9d3-e409-401d-a17f-e5d5f73e11a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\TextureCache">
+      <UniqueIdentifier>{3eeef1a9-f1b5-4c85-9e08-c2df6737aa0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\TimeClass">
+      <UniqueIdentifier>{c0efa380-cc2c-417f-ad0e-ffb514dee837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Transform">
+      <UniqueIdentifier>{b4d9eed7-9696-46e9-8704-34cd3f738f5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Vec2">
+      <UniqueIdentifier>{4aec14da-7dab-41ef-b332-aa951842a7ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EventTest">
+      <UniqueIdentifier>{93c41389-6110-49fc-89c0-815bfa9c4ed0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Event">
+      <UniqueIdentifier>{e834623f-21c8-4b76-9d24-f0673db20057}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
     <ClCompile Include="Base\Component.cpp">
-      <Filter>Engine\Component</Filter>
+      <Filter>Engine\Base\Component</Filter>
     </ClCompile>
     <ClCompile Include="Base\GameObject.cpp">
-      <Filter>Engine\GameObject</Filter>
+      <Filter>Engine\Base\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="Base\Object.cpp">
-      <Filter>Engine\Object</Filter>
+      <Filter>Engine\Base\Object</Filter>
     </ClCompile>
     <ClCompile Include="Base\Vec2.cpp">
-      <Filter>Engine\Vec2</Filter>
+      <Filter>Engine\Base\Vec2</Filter>
     </ClCompile>
     <ClCompile Include="Base\Transform.cpp">
-      <Filter>Engine\Transform</Filter>
+      <Filter>Engine\Base\Transform</Filter>
     </ClCompile>
     <ClCompile Include="Base\TextureCache.cpp">
-      <Filter>Engine\TextureCache</Filter>
+      <Filter>Engine\Base\TextureCache</Filter>
     </ClCompile>
     <ClCompile Include="Base\SpriteRenderer.cpp">
-      <Filter>Engine\SpriteRenderer</Filter>
+      <Filter>Engine\Base\SpriteRenderer</Filter>
     </ClCompile>
     <ClCompile Include="Base\TimeClass.cpp">
-      <Filter>Engine\TimeClass</Filter>
+      <Filter>Engine\Base\TimeClass</Filter>
     </ClCompile>
     <ClCompile Include="Base\AnimationData.cpp">
-      <Filter>Engine\AnimatedSpriteRenderer</Filter>
+      <Filter>Engine\Base\AnimatedSpriteRenderer</Filter>
     </ClCompile>
     <ClCompile Include="Base\AnimatedSpriteRenderer.cpp">
-      <Filter>Engine\AnimatedSpriteRenderer</Filter>
+      <Filter>Engine\Base\AnimatedSpriteRenderer</Filter>
     </ClCompile>
     <ClCompile Include="Base\Scene.cpp">
-      <Filter>Engine\Scene</Filter>
+      <Filter>Engine\Base\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Base\SceneManager.cpp">
-      <Filter>Engine\SceneManager</Filter>
+      <Filter>Engine\Base\SceneManager</Filter>
     </ClCompile>
     <ClCompile Include="Base\Game.cpp">
-      <Filter>Engine\Game</Filter>
+      <Filter>Engine\Base\Game</Filter>
     </ClCompile>
     <ClCompile Include="Base\InputManager.cpp">
-      <Filter>Engine\InputManager</Filter>
+      <Filter>Engine\Base\InputManager</Filter>
     </ClCompile>
     <ClCompile Include="Game\MyGame.cpp">
       <Filter>Game\MyGame</Filter>
@@ -150,49 +162,55 @@
     <ClCompile Include="Game\CollisionTest.cpp">
       <Filter>Game\CollisionTest</Filter>
     </ClCompile>
+    <ClCompile Include="Physics\RectangleCollider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\EventTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\GameObject.h">
-      <Filter>Engine\GameObject</Filter>
+      <Filter>Engine\Base\GameObject</Filter>
     </ClInclude>
     <ClInclude Include="Base\Object.h">
-      <Filter>Engine\Object</Filter>
+      <Filter>Engine\Base\Object</Filter>
     </ClInclude>
     <ClInclude Include="Base\Component.h">
-      <Filter>Engine\Component</Filter>
+      <Filter>Engine\Base\Component</Filter>
     </ClInclude>
     <ClInclude Include="Base\Transform.h">
-      <Filter>Engine\Transform</Filter>
+      <Filter>Engine\Base\Transform</Filter>
     </ClInclude>
     <ClInclude Include="Base\Vec2.h">
-      <Filter>Engine\Vec2</Filter>
+      <Filter>Engine\Base\Vec2</Filter>
     </ClInclude>
     <ClInclude Include="Base\SpriteRenderer.h">
-      <Filter>Engine\SpriteRenderer</Filter>
+      <Filter>Engine\Base\SpriteRenderer</Filter>
     </ClInclude>
     <ClInclude Include="Base\TextureCache.h">
-      <Filter>Engine\TextureCache</Filter>
+      <Filter>Engine\Base\TextureCache</Filter>
     </ClInclude>
     <ClInclude Include="Base\TimeClass.h">
-      <Filter>Engine\TimeClass</Filter>
+      <Filter>Engine\Base\TimeClass</Filter>
     </ClInclude>
     <ClInclude Include="Base\AnimatedSpriteRenderer.h">
-      <Filter>Engine\AnimatedSpriteRenderer</Filter>
+      <Filter>Engine\Base\AnimatedSpriteRenderer</Filter>
     </ClInclude>
     <ClInclude Include="Base\AnimationData.h">
-      <Filter>Engine\AnimatedSpriteRenderer</Filter>
+      <Filter>Engine\Base\AnimatedSpriteRenderer</Filter>
     </ClInclude>
     <ClInclude Include="Base\Scene.h">
-      <Filter>Engine\Scene</Filter>
+      <Filter>Engine\Base\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Base\SceneManager.h">
-      <Filter>Engine\SceneManager</Filter>
+      <Filter>Engine\Base\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="Base\Game.h">
-      <Filter>Engine\Game</Filter>
+      <Filter>Engine\Base\Game</Filter>
     </ClInclude>
     <ClInclude Include="Base\InputManager.h">
-      <Filter>Engine\InputManager</Filter>
+      <Filter>Engine\Base\InputManager</Filter>
     </ClInclude>
     <ClInclude Include="Physics\Collider.h">
       <Filter>Engine\Physics\Collider</Filter>
@@ -217,6 +235,15 @@
     </ClInclude>
     <ClInclude Include="Physics\Cell.h">
       <Filter>Engine\Physics\Cell</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\RectangleCollider.h">
+      <Filter>Engine\Physics\RectangleCollider</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\EventTest.h">
+      <Filter>Game\EventTest</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Event.h">
+      <Filter>Engine\Base\Event</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

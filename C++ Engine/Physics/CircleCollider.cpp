@@ -1,15 +1,14 @@
 #include "CircleCollider.h"
 #include "../Base/GameObject.h"
 #include "../Base/Transform.h"
-#include <cmath>
 #include "../Physics/Cell.h"
+#include "../Physics/RectangleCollider.h"
+#include <cmath>
 
 #pragma region Constructor/Destructor
-CircleCollider::CircleCollider() {
-}
+CircleCollider::CircleCollider() {}
 
-CircleCollider::~CircleCollider() {
-}
+CircleCollider::~CircleCollider() {}
 #pragma endregion
 
 #pragma region Collision Detection
@@ -19,6 +18,11 @@ CollisionInfo CircleCollider::GetEarliestCollision(std::weak_ptr<Collider> pOthe
 	if (circle.get() != nullptr)
 		return GetEarliestCollision(circle.get(), pVelocity);
 
+	std::shared_ptr<RectangleCollider> rectangle = std::dynamic_pointer_cast<RectangleCollider>(pOther.lock());
+
+	if (rectangle.get() != nullptr)
+		return GetEarliestCollision(rectangle.get(), pVelocity);
+
 	return CollisionInfo();
 }
 
@@ -26,15 +30,20 @@ bool CircleCollider::Overlaps(std::weak_ptr<Collider> pOther) {
 	std::shared_ptr<CircleCollider> circle = std::dynamic_pointer_cast<CircleCollider>(pOther.lock());
 
 	if (circle.get() != nullptr)
-		return Overlaps(circle);
+		return Overlaps(circle.get());
+
+	std::shared_ptr<RectangleCollider> rectangle = std::dynamic_pointer_cast<RectangleCollider>(pOther.lock());
+
+	if (rectangle.get() != nullptr)
+		return Overlaps(rectangle.get());
 
 	return false;
 }
 
 CollisionInfo CircleCollider::GetEarliestCollision(CircleCollider* pOther, const Vec2 pVelocity) {
 	Vec2 relativePosition = owner.lock()->transform.lock()->GetGlobalPosition() - pOther->owner.lock()->transform.lock()->GetGlobalPosition();
-	if (relativePosition.Length() < radius + pOther->radius) {
 
+	if (relativePosition.Length() < radius + pOther->radius) {
 		Vec2 oldPosition = owner.lock()->transform.lock()->GetGlobalPosition() - pVelocity;
 		float timeOfImpact = CalculateCircleTimeOfImpact(pOther, pVelocity);
 
@@ -45,12 +54,26 @@ CollisionInfo CircleCollider::GetEarliestCollision(CircleCollider* pOther, const
 		Vec2 unitNormal = (POI - pOther->owner.lock()->transform.lock()->GetGlobalPosition()).Normalized();
 		return CollisionInfo(unitNormal, pOther, timeOfImpact);
 	}
+
 	return CollisionInfo();
 }
 
-bool CircleCollider::Overlaps(std::weak_ptr<CircleCollider> pOther, Vec2 pVelocity) const {
-	Vec2 diffVec = owner.lock()->transform.lock()->GetGlobalPosition() - pOther.lock()->owner.lock()->transform.lock()->GetGlobalPosition();
-	return (diffVec.Length() < radius + pOther.lock()->radius);
+CollisionInfo CircleCollider::GetEarliestCollision(RectangleCollider* pOther, const Vec2 pVelocity) {
+	//NEEDS IMPLEMENTATION
+
+	return CollisionInfo();
+}
+
+bool CircleCollider::Overlaps(CircleCollider* pOther) const {
+	Vec2 diffVec = owner.lock()->transform.lock()->GetGlobalPosition() - pOther->owner.lock()->transform.lock()->GetGlobalPosition();
+
+	return (diffVec.Length() < radius + pOther->radius);
+}
+
+bool CircleCollider::Overlaps(RectangleCollider* pOther) const {
+	//NEEDS IMPLEMENTATION
+
+	return false;
 }
 #pragma endregion
 
@@ -91,10 +114,6 @@ float CircleCollider::CalculateDistanceToLine(Vec2 pLineStart, Vec2 pLineEnd) {/
 	float projection = differenceVector.Dot(lineVector);
 	float d = projection / (pow(lineVector.Length(), 2));
 
-	//std::cout << lineVector;
-
-	//std::cout << projection<<" "<< pow(lineVector.Length(), 2) <<" " << d << "\n";
-
 	if (d < 0)
 		return -1;
 	if (d > 1)
@@ -102,7 +121,6 @@ float CircleCollider::CalculateDistanceToLine(Vec2 pLineStart, Vec2 pLineEnd) {/
 
 	Vec2 point = pLineStart + lineVector * d;
 
-	//std::cout << (point - owner.lock()->transform.lock()->GetGlobalPosition()).Length() << "\n";
 	return (point - owner.lock()->transform.lock()->GetGlobalPosition()).Length();
 
 }

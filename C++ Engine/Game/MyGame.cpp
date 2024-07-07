@@ -11,6 +11,8 @@
 #include "../Physics/CircleCollider.h"
 #include "../Physics/CollisionManager.h"
 
+#include "../Game/EventTest.h"
+
 #pragma region Constructor/Destructor
 MyGame::MyGame(const Vec2 pWindowSize) :Game(pWindowSize) {
 	CreateGame();
@@ -49,7 +51,8 @@ void MyGame::CreateGame() {
 	collider1.lock()->radius = 32;
 	collider1.lock()->SetCollisionType(false);
 
+	//EventTest test;
 
-
+	std::weak_ptr<EventTest> test = g.lock()->AddComponent(scene.lock()->InstantiateComponent<EventTest>());
 }
 #pragma endregion

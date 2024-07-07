@@ -52,7 +52,6 @@ public:
 	void RotateAroundRadians(Vec2& pPos, const float pAngle);
 	void RotateTowardsDegrees(const Vec2& pTarget,float pMaxAngle=180);
 	void Reflect(const float pBounciness, const Vec2& pCollisionNormal);
-
 #pragma endregion
 
 #pragma region Special Operations
@@ -65,7 +64,6 @@ public:
 
 };
 
-//c++ is fucking weird man
 Vec2 operator* (float x, const Vec2& pOther);
 Vec2 operator* (const Vec2& pOther, float x);
 Vec2 operator- (const Vec2& pLeft, const Vec2& pRight);

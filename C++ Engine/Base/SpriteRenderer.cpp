@@ -34,6 +34,7 @@ void SpriteRenderer::LoadSprite(const std::string& pTextureAdress) {
 void SpriteRenderer::Draw() {
 	if (window == nullptr)
 		return;
+
 	if (IsEnabledGlobal()) {
 		sprite.setScale(Vec2::Vec2ToVector2f(owner.lock()->transform.lock()->GetGlobalScale()));
 		sprite.setPosition(Vec2::Vec2ToVector2f(owner.lock()->transform.lock()->GetGlobalPosition()));

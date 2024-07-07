@@ -2,11 +2,9 @@
 #include "GameObject.h"
 
 #pragma region Constructor/Destructor
-Transform::Transform() :Component() {
-}
+Transform::Transform() :Component() { }
 
-Transform::~Transform() {
-}
+Transform::~Transform() { }
 #pragma endregion
 
 #pragma region Global Values
@@ -16,6 +14,7 @@ Vec2 Transform::GetGlobalPosition() const {
 	else
 		return localPosition + owner.lock()->transform.lock()->GetGlobalPosition();
 }
+
 Vec2 Transform::GetGlobalScale() const {
 	if (owner.lock() == nullptr)
 		return localScale;
@@ -24,6 +23,7 @@ Vec2 Transform::GetGlobalScale() const {
 		return Vec2(localScale.x * parentScale.x, localScale.y * parentScale.y);
 	}
 }
+
 float Transform::GetGlobalRotation() const {
 	if (owner.lock() == nullptr)
 		return localRotation;

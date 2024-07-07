@@ -2,17 +2,15 @@
 #include "GameObject.h"
 
 #pragma region Constructor/Destructor
-Scene::Scene(const std::string pID) :ID(pID) {
-}
+Scene::Scene(const std::string pID) :ID(pID) {}
 
-Scene::~Scene() {
-}
+Scene::~Scene() {}
 #pragma endregion
 
 #pragma region Runtime
 void Scene::update() {
 	for (int i = 0; i < objects.size(); i++)
-		if (objects[i]->IsEnabledGlobal()) 
+		if (objects[i]->IsEnabledGlobal())
 			objects[i]->update();
 }
 void Scene::Update() {

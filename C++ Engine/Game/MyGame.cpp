@@ -10,6 +10,7 @@
 #include "../Game/CollisionTest.h"
 #include "../Physics/CircleCollider.h"
 #include "../Physics/CollisionManager.h"
+#include "../Physics/RectangleCollider.h"
 
 #include "../Game/EventTest.h"
 
@@ -26,17 +27,17 @@ MyGame::~MyGame(){
 
 void MyGame::CreateGame() {
 
-	CollisionManager::GetInstance()->EnableSpacePartitioning(true);
+	CollisionManager::GetInstance()->EnableSpacePartitioning(false);
 
 	std::weak_ptr<Scene> scene = sceneManager->AddScene<Scene>("test");
 
 	std::weak_ptr<GameObject> g = scene.lock()->InstantiateGameObject<GameObject>();
 	std::weak_ptr<SpriteRenderer> s = g.lock()->AddComponent(scene.lock()->InstantiateComponent<SpriteRenderer>());
-	s.lock()->LoadSprite("Game/Assets/circle.png");
+	s.lock()->LoadSprite("Game/Assets/rectangle.png");
 
 	g.lock()->transform.lock()->localPosition = Vec2(100, 100);
-	std::weak_ptr<CircleCollider> collider = g.lock()->AddComponent(scene.lock()->InstantiateComponent<CircleCollider>());
-	collider.lock()->radius = 32;
+	std::weak_ptr<RectangleCollider> collider = g.lock()->AddComponent(scene.lock()->InstantiateComponent<RectangleCollider>());
+	collider.lock()->SetBounds(64, 64);
 	collider.lock()->SetCollisionType(false);
 
 	std::weak_ptr<CollisionTest> collisionTest = g.lock()->AddComponent(scene.lock()->InstantiateComponent<CollisionTest>());
@@ -44,12 +45,23 @@ void MyGame::CreateGame() {
 
 	std::weak_ptr<GameObject> g1 = scene.lock()->InstantiateGameObject<GameObject>();
 	std::weak_ptr<SpriteRenderer> s1 = g1.lock()->AddComponent(scene.lock()->InstantiateComponent<SpriteRenderer>());
-	s1.lock()->LoadSprite("Game/Assets/circle.png");
+	s1.lock()->LoadSprite("Game/Assets/rectangle.png");
 
 	g1.lock()->transform.lock()->localPosition = Vec2(300, 300);
-	std::weak_ptr<CircleCollider> collider1 = g1.lock()->AddComponent(scene.lock()->InstantiateComponent<CircleCollider>());
-	collider1.lock()->radius = 32;
+	std::weak_ptr<RectangleCollider> collider1 = g1.lock()->AddComponent(scene.lock()->InstantiateComponent<RectangleCollider>());
+	collider1.lock()->SetBounds(64, 64);
 	collider1.lock()->SetCollisionType(false);
+
+
+
+	//std::weak_ptr<GameObject> g2 = scene.lock()->InstantiateGameObject<GameObject>();
+	//std::weak_ptr<SpriteRenderer> s2 = g2.lock()->AddComponent(scene.lock()->InstantiateComponent<SpriteRenderer>());
+	//s2.lock()->LoadSprite("Game/Assets/circle.png");
+
+	//g2.lock()->transform.lock()->localPosition = Vec2(400, 400);
+	//std::weak_ptr<CircleCollider> collider2 = g2.lock()->AddComponent(scene.lock()->InstantiateComponent<CircleCollider>());
+	//collider2.lock()->radius = 32;
+	//collider2.lock()->SetCollisionType(true);
 
 	//EventTest test;
 

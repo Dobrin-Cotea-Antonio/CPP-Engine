@@ -120,6 +120,7 @@ void CollisionManager::Move(const std::weak_ptr<Collider> pCollider, const Vec2 
 }
 
 void CollisionManager::CalculateOverlaps(const std::weak_ptr<Collider> pCollider, const Vec2 pVelocity) {
+
 	if (!useSpacePartitioning) {
 		FinaliseOverlaps(pCollider, triggerColliders, pVelocity);
 		return;
@@ -139,6 +140,7 @@ void CollisionManager::CalculateOverlaps(const std::weak_ptr<Collider> pCollider
 }
 void CollisionManager::FinaliseOverlaps(const std::weak_ptr<Collider> pCollider, std::vector<std::weak_ptr<Collider>>& pList, const Vec2 pVelocity) {
 	for (int i = 0; i < pList.size(); i++) {
+		//std::cout << "TEST1\n";
 		if (pCollider.lock().get() == pList[i].lock().get())
 			continue;
 		if (!pCollider.lock()->Overlaps(pList[i]))

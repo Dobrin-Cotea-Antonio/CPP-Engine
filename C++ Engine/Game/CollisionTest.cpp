@@ -31,6 +31,12 @@ void CollisionTest::Update() {
 		direction += Vec2(0, 1);
 	if (InputManager::IsKeyPressed(Key::D))
 		direction += Vec2(1, 0);
+
+	if (InputManager::IsKeyPressed(Key::LeftArrow))
+		owner.lock()->transform.lock()->localRotation -= TimeClass::deltaTime * rotationSpeed;
+
+	if (InputManager::IsKeyPressed(Key::RightArrow))
+		owner.lock()->transform.lock()->localRotation += TimeClass::deltaTime * rotationSpeed;
 	
 	direction.Normalize();
 

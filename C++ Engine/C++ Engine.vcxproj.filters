@@ -162,11 +162,11 @@
     <ClCompile Include="Game\CollisionTest.cpp">
       <Filter>Game\CollisionTest</Filter>
     </ClCompile>
-    <ClCompile Include="Physics\RectangleCollider.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Game\EventTest.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game\EventTest</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\RectangleCollider.cpp">
+      <Filter>Engine\Physics\RectangleCollider</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

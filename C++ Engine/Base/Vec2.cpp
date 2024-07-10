@@ -64,6 +64,10 @@ Vec2 operator-=(Vec2& pLeft, const Vec2& pRight) {
 	return pLeft;
 }
 
+bool operator==(const Vec2& pLeft, const Vec2& pRight) {
+	return (pLeft.x == pRight.x && pLeft.y == pRight.y);
+}
+
 Vec2 Vec2::operator*(float pOther) {
 	return Vec2(x * pOther, y * pOther);
 }
@@ -110,8 +114,10 @@ void Vec2::Normalize() {
 
 Vec2 Vec2::Normalized() const {
 	float length = Length();
+
 	if (length)
 		return Vec2(x / length, y / length);
+
 	return Vec2(0, 0);
 }
 #pragma endregion

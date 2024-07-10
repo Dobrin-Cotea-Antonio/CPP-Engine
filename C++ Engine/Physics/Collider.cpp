@@ -15,8 +15,8 @@ Collider::~Collider() {
 
 #pragma region Collider type
 void Collider::SetCollisionType(bool pIsTrigger) {
-	if (isTrigger == pIsTrigger)
-		return;
+	//if (isTrigger == pIsTrigger)
+	//	return;
 
 	isTrigger = pIsTrigger;
 	std::weak_ptr<Collider> p = std::dynamic_pointer_cast<Collider>(selfPointer.lock());

@@ -70,3 +70,4 @@ Vec2 operator- (const Vec2& pLeft, const Vec2& pRight);
 Vec2 operator+ (const Vec2& pLeft, const Vec2& pRight);
 Vec2 operator+= (Vec2& pLeft, const Vec2& pRight);
 Vec2 operator-= (Vec2& pLeft, const Vec2& pRight);
+bool operator== (const Vec2& pLeft, const Vec2& pRight);

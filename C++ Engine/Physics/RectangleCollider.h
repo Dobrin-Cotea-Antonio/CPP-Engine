@@ -24,15 +24,25 @@ public:
 private:
 	CollisionInfo GetEarliestCollision(RectangleCollider* pOther, const Vec2 pVelocity);
 	CollisionInfo GetEarliestCollision(CircleCollider* pOther, const Vec2 pVelocity);
-	bool Overlaps(RectangleCollider* pOther)const;
-	bool Overlaps(CircleCollider* pOther)const;
+	bool Overlaps(RectangleCollider* pOther);
+	bool Overlaps(CircleCollider* pOther);
 #pragma endregion 
 
 #pragma region Helper Methods
 private:
 	float CalculateCircleTimeOfImpact(const RectangleCollider* pOther, const Vec2 pVelocity);
 	void GetGlobalBounds();
+
+	void ReturnNormalsAxis(std::vector<Vec2>& pNormals, RectangleCollider* pRect1, RectangleCollider* pRect2);
+	Vec2 ReturnCircleAxis(CircleCollider* pCircle, RectangleCollider* pRect);
+	Vec2 ProjectOntoAxis(RectangleCollider* pCollider, Vec2 pAxis)const;
+	Vec2 ProjectOntoAxis(std::vector<Vec2>& pVertices, Vec2 pAxis)const;
+	Vec2 ProjectCircleOntoAxis(CircleCollider* pCircle, Vec2 pAxis)const;
+	float GetRectOverlap(const Vec2 pRect1Values, const Vec2 pRect2Values)const;
 public:
 	void SetBounds(const float pWidth, const float pHeight);
+	void ReturnGlobalBounds(std::vector<Vec2>& pVerticesGlobal);
+	Vec2 ReturnGlobalCenter()const;
+
 #pragma endregion
 };

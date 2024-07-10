@@ -30,7 +30,9 @@ public:
 	}
 
 	Method<A...>& Invoke(A... pArgs) {
-		boundMethod(static_cast<A&&>(pArgs)...); return (*this);
+		boundMethod(static_cast<A&&>(pArgs)...); 
+
+		return (*this);
 	}
 
 	void operator()(A... pArgs) {
